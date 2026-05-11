@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Michael Lienert | Revenue &amp; Partnerships Leader</title>
+<meta name="description" content="Michael Lienert is a revenue and partnerships leader with a track record of driving growth across sports, entertainment, hospitality, and experience-based businesses. Based in Michigan."/>
+<link rel="canonical" href="https://michaellienert.netlify.app/"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/style.css"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Michael Lienert",
+  "url": "https://michaellienert.netlify.app/",
+  "description": "Revenue and partnerships leader with experience in sports, entertainment, hospitality, and experience-based businesses.",
+  "jobTitle": "Revenue & Partnerships Leader",
+  "address": {"@type": "PostalAddress","addressRegion": "Michigan","addressCountry": "US"},
+  "sameAs": [
+    "https://www.facebook.com/michael.lienert.18/",
+    "https://www.instagram.com/michaellienert/",
+    "https://x.com/michael_lienert",
+    "https://www.linkedin.com/in/michael-l-91a0808a/",
+    "https://es.quora.com/profile/Michael-Lienert",
+    "https://substack.com/@michaellienert",
+    "https://linktr.ee/michaellienert",
+    "https://michaellienert.com/",
+    "https://michaellienertscholarship.com/"
+  ]
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function(){
+  const _sb=supabase.createClient('https://aowblircaymwuymcmllh.supabase.co/','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFvd2JsaXJjYXltd3V5bWNtbGxoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIzMzExMjcsImV4cCI6MjA2NzkwNzEyN30.qS7jxVwu83zEYMvxNo7C_2dtVrSZ6wYIFiNtoN69UkQ');
+  const _cid='Michael Lienert';
+  async function loadSBLinks(){
+    const[{data:soc},{data:news}]=await Promise.all([
+      _sb.from('social_media').select('*').eq('client_id',_cid),
+      _sb.from('news_links').select('*').eq('client_id',_cid)
+    ]);
+    const render=(ids,data)=>ids.forEach(id=>{
+      const el=document.getElementById(id);
+      if(!el||!data)return;
+      el.innerHTML='';
+      data.forEach(l=>{
+        const a=document.createElement('a');
+        a.href=l.url;a.target='_blank';a.rel='noopener noreferrer';a.title=l.name;
+        a.innerHTML='<img src="'+l.icon+'" alt="'+l.name+'" style="width:30px;height:30px;border-radius:4px"/>';
+        el.appendChild(a);
+      });
+    });
+    render(['sml-soc-home'],soc);
+    render(['sml-news-home'],news);
+  }
+  document.addEventListener('DOMContentLoaded',loadSBLinks);
+})();
+</script>
+</head>
+<body>
+<nav id="main-nav">
+  <a class="nav-logo" href="/">Michael<span> Lienert</span></a>
+  <ul class="nav-links">
+    <li><a class="active" href="/">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="h-hero">
+  <div class="h-inner">
+    <div class="h-photo"><img src="images/hero.jpg" alt="Michael Lienert"/></div>
+    <div>
+      <h1 class="h-name">Michael Lienert</h1>
+      <p class="h-role">Revenue &amp; Partnerships Leader</p>
+      <p class="h-desc">Building high-performing teams, closing premium partnerships, and driving revenue growth across sports, entertainment, and experience-based businesses — from LAFC's founding to SoFi Stadium and beyond.</p>
+      <div class="h-loc">&#127968; Michigan &nbsp;|&nbsp; Detroit · Chicago · Los Angeles · New Orleans</div>
+    </div>
+  </div>
+</div>
+
+<div class="h-about">
+  <div class="ha-inner">
+    <div class="ha-text">
+      <p class="eyebrow">Career Story</p>
+      <h2 class="sec-title">Built to Build From Zero</h2>
+      <p>Michael Lienert's career has been defined by a single consistent challenge: taking something that doesn't exist yet and making it real. He joined LAFC as one of the organization's first hires — before the team had played a single match — and helped sell out the entire premium inventory before the stadium ever opened.</p>
+      <p>That build-from-scratch discipline carried through his work at SoFi Stadium with the Los Angeles Chargers, his senior roles with the Detroit Tigers and Detroit Red Wings, and his time leading Chicago Fire FC's revenue and partnerships operation.</p>
+      <p>Today, Michael is expanding his platform into real estate and business development in Michigan — holding both a Michigan Real Estate License and a Michigan Life and Health Insurance License. You can follow his ongoing work and writing on <a href="https://substack.com/@michaellienert" target="_blank" rel="noopener">his Substack newsletter</a>.</p>
+      <a class="ha-link" href="about.html">Learn more &rarr;</a>
+    </div>
+    <div><img class="ha-photo" src="images/hero-secondary.jpg" alt="Michael Lienert at the Daytona 500"/></div>
+  </div>
+</div>
+
+<div class="acc-section" style="background:var(--off)">
+  <div class="acc-wrap">
+    <button class="acc-btn" onclick="tog(this,'s-home')">Follow Michael Lienert on Social Media <span class="chevron">&#8964;</span></button>
+    <div class="acc-body" id="s-home"><div id="sml-soc-home" class="social-media-list"></div></div>
+    <button class="acc-btn" onclick="tog(this,'n-home')">Michael Lienert in the Press <span class="chevron">&#8964;</span></button>
+    <div class="acc-body" id="n-home"><div id="sml-news-home" class="social-media-list"></div></div>
+  </div>
+</div>
+
+<div class="h-press">
+  <div class="pi">
+    <p class="eyebrow">Perspectives &amp; Insights</p>
+    <h2 class="sec-title">On Revenue, Relationships &amp; Building What Lasts</h2>
+    <div class="cards">
+      <a class="card card-article" href="selling-vision-before-venue.html">
+        <div class="ct-img"><img src="images/article-1.jpg" alt="Selling a vision before the venue exists"/></div>
+        <div class="cb">
+          <div class="cb-pub">Revenue Strategy</div>
+          <div class="cb-hl">Selling the Vision Before the Venue Exists</div>
+          <div class="cb-yr">May 2025</div>
+        </div>
+      </a>
+      <a class="card card-article" href="premium-partnerships-sports.html">
+        <div class="ct-img"><img src="images/article-2.jpg" alt="Premium partnerships in sports"/></div>
+        <div class="cb">
+          <div class="cb-pub">Partnerships</div>
+          <div class="cb-hl">What Premium Partnerships Actually Look Like in Sports</div>
+          <div class="cb-yr">April 2025</div>
+        </div>
+      </a>
+      <a class="card card-article" href="from-sports-to-real-estate.html">
+        <div class="ct-img"><img src="images/article-3.jpg" alt="From sports business to real estate"/></div>
+        <div class="cb">
+          <div class="cb-pub">Business Development</div>
+          <div class="cb-hl">From the Press Box to Real Estate: Why the Skills Transfer</div>
+          <div class="cb-yr">March 2025</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="h-contact">
+  <div class="hc-inner">
+    <div>
+      <p class="eyebrow">Get in Touch</p>
+      <h2 class="sec-title">Contact</h2>
+      <form class="cf" onsubmit="return false">
+        <div><label>Your Name</label><input type="text" placeholder="Your name"/></div>
+        <div><label>Email</label><input type="email" placeholder="email@example.com"/></div>
+        <div><label>Message</label><textarea placeholder="Your message..."></textarea></div>
+        <button class="btn-sm" type="submit">Send Message</button>
+      </form>
+    </div>
+    <div class="hcp">
+      <h3 class="hc-title">Let's connect.</h3>
+      <p>Whether you're exploring a partnership, looking for a speaker, or building something new and want to compare notes — Michael is always open to a conversation. Reach out and let's find the overlap.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Michael Lienert. All rights reserved. &nbsp;|&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+</footer>
+
+<script>
+function tog(btn,id){
+  const c=document.getElementById(id),open=c.classList.contains('open');
+  document.querySelectorAll('.acc-body').forEach(e=>e.classList.remove('open'));
+  document.querySelectorAll('.acc-btn').forEach(e=>e.classList.remove('open'));
+  if(!open){c.classList.add('open');btn.classList.add('open');}
+}
+</script>
+</body>
+</html>
